@@ -5,9 +5,9 @@ services:
       image: mysql
       restart: always
       environment :
-        MYSQL_ROOT_PASSWORD: 1234
+        MYSQL_ROOT_PASSWORD: 
         MYSQL_DATABASE: wp_db
-        MYSQL_USER: wp_user
+        MYSQL_USER: 
         MYSQL_PASSWORD: 1234
       volumes:
           - mysql:/var/lib/mysql 
@@ -21,9 +21,9 @@ services:
           - "8000:80"
       environment:
           WORDPRESS_DB_HOST: mysql_database:3306
-          WORDPRESS_DB_USER: wp_user
-          WORDPRESS_DB_PASSWORD: 1234
-          WORDPRESS_DB_NAME: wp_db
+          WORDPRESS_DB_USER: 
+          WORDPRESS_DB_PASSWORD: 
+          WORDPRESS_DB_NAME: 
       volumes:
           ["./:/var/www/html"]
  # image for phpmyadmin
